@@ -13,4 +13,10 @@ export class UpdatescreenService {
         private http: HttpClient,
     ) { }
 
+    GpDelete(testId): Observable<any> {
+        return this.http.delete(this.sharedService.DESKTOP_API + '/test/' + testId);
+    }
+    GpUpdate(test): Observable<any> {
+        return this.http.put(this.sharedService.DESKTOP_API + '/test', test);
+    }
 }

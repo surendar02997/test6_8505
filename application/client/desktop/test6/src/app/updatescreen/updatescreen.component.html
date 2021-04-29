@@ -3,15 +3,18 @@
     <div id="template-iyc2" class="form-group">
         <label id="template-ihtm" class="label">Name</label>
         <input placeholder="Type here your name" id="template-iw3l"
-        required="true" class="input form-control" />
+        required="true" [(ngModel)]="test.name" [ngModelOptions]="{standalone: true}"
+        class="input form-control" />
     </div>
     <div id="template-ibvw" class="form-group">
         <label id="template-is8g" class="label">Email</label>
         <input type="email" placeholder="Type here your email" id="template-iqah"
-        required="true" class="input form-control" />
+        required="true" [(ngModel)]="test.email" [ngModelOptions]="{standalone: true}"
+        class="input form-control" />
     </div>
     <div id="template-i001a" class="form-group"></div>
     <div id="template-ioln2" class="form-group">
-        <button type="submit" id="template-i2lq3" class="button btn btn-primary">update</button>
+        <button type="submit" id="template-i2lq3" (click)="GpUpdate()" class="button btn btn-primary">update</button>
+        <button id="template-ibg9k" (click)="GpDelete()" class="button btn btn-primary">delete</button>
     </div>
 </form>
