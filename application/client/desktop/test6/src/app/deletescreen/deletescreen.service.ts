@@ -13,7 +13,4 @@ export class DeletescreenService {
         private http: HttpClient,
     ) { }
 
-    GpDelete(testId): Observable<any> {
-        return this.http.delete(this.sharedService.DESKTOP_API + '/test/' + testId);
-    }
 }

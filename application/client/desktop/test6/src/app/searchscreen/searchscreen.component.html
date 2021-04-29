@@ -1,0 +1,48 @@
+<h2 class="screen-align">Searchscreen</h2>
+<form id="template-i54l" class="form">
+    <div id="template-ilru" class="form-group">
+        <label id="template-ihv8" class="label">Name</label>
+        <input placeholder="Type here your name" id="template-i61g"
+        [(ngModel)]="test.name" [ngModelOptions]="{standalone: true}" class="input form-control"
+        />
+    </div>
+    <div id="template-ium1" class="form-group">
+        <label id="template-i99k" class="label">Email</label>
+        <input type="email" placeholder="Type here your email" id="template-izg4"
+        [(ngModel)]="test.email" [ngModelOptions]="{standalone: true}" class="input form-control"
+        />
+    </div>
+    <div id="template-i5dyr" class="form-group"></div>
+    <div id="template-ihiym" class="form-group">
+        <button type="submit" id="template-i7ekh" class="button btn btn-primary">search</button>
+    </div>
+</form>
+<div id="template-idyic" class="row">
+    <div id="template-i5oog" class="cell">
+        <div name="grid_template-i6q1g" class="">
+            <table id="table" class="table table-bordered  table-striped" data-show-header="true"
+            data-pagination="true" data-id-field="name">
+                <thead class="table table-hover">
+                    <tr>
+                        <th *ngFor="let column of columnDefs">{{column.headerName}}</th>
+                    </tr>
+                </thead>
+                <tbody class="table-design" *ngIf="rowData.length==0">
+                    <td style="text-align: center;" colspan="5">No Data Found</td>
+                </tbody>
+                <tbody class="table-design" *ngIf="rowData.length>0">
+                    <tr *ngFor="let values of rowData | slice: (page-1) * paginationPageSize :(page-1) * paginationPageSize + paginationPageSize">
+                        <td>{{ values.name }}</td>
+                        <td>{{ values.email }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-right">
+                <ngb-pagination class="d-flex justify-content-start" [(page)]="page" [maxSize]="5"
+                [rotate]="true" [pageSize]="paginationPageSize" [collectionSize]="rowData.length"
+                [boundaryLinks]="true"></ngb-pagination>
+            </div>
+        </div>
+        <div id="myGrid" class=""></div>
+    </div>
+</div>

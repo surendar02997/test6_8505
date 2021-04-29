@@ -7,13 +7,10 @@ import { SharedService } from '../../shared/shared.service';
     providedIn: 'root'
 })
 
-export class UpdatescreenService {
+export class SearchscreenService {
     constructor(
         private sharedService: SharedService,
         private http: HttpClient,
     ) { }
 
-    GpUpdate(test): Observable<any> {
-        return this.http.put(this.sharedService.DESKTOP_API + '/test', test);
-    }
 }

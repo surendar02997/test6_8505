@@ -26,6 +26,9 @@ const routes: Routes = [
 
 { path : 'createscreen', loadChildren: () => import('./createscreen/createscreen.module').then(m => m.CreatescreenModule), canActivate: [AuthGuard] } , 
 { path : 'updatescreen', loadChildren: () => import('./updatescreen/updatescreen.module').then(m => m.UpdatescreenModule), canActivate: [AuthGuard] } , 
+{ path : 'deletescreen', loadChildren: () => import('./deletescreen/deletescreen.module').then(m => m.DeletescreenModule), canActivate: [AuthGuard] } , 
+{ path : 'searchscreen', loadChildren: () => import('./searchscreen/searchscreen.module').then(m => m.SearchscreenModule), canActivate: [AuthGuard] } , 
+{ path : 'getallscreen', loadChildren: () => import('./getallscreen/getallscreen.module').then(m => m.GetallscreenModule), canActivate: [AuthGuard] } , 
 ];
 
 @NgModule({

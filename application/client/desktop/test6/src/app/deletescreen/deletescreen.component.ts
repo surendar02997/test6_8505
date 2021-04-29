@@ -8,7 +8,6 @@ import { DeletescreenService } from './deletescreen.service';
 })
 
 export class DeletescreenComponent implements OnInit {
-    queryId: any;
     public test = {
         name: '',
         email: '',
@@ -19,13 +18,5 @@ export class DeletescreenComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-    }
-    GpDelete() {
-        this.deletescreenService.GpDelete(this.queryId).subscribe(data => {
-            this.GpGetNounById();
-        },
-        error => {
-            console.log('Error', error);
-        });
     }
 }

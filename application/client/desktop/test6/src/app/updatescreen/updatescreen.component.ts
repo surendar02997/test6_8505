@@ -8,7 +8,6 @@ import { UpdatescreenService } from './updatescreen.service';
 })
 
 export class UpdatescreenComponent implements OnInit {
-    queryId: any;
     public test = {
         name: '',
         email: '',
@@ -19,14 +18,6 @@ export class UpdatescreenComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-    }
-    GpDelete() {
-        this.updatescreenService.GpDelete(this.queryId).subscribe(data => {
-            this.GpGetNounById();
-        },
-        error => {
-            console.log('Error', error);
-        });
     }
     GpUpdate() {
         this.updatescreenService.GpUpdate(this.test).subscribe(data => {

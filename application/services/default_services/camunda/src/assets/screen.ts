@@ -7,5 +7,11 @@
 {"resources":"createscreen", "role":"Guest"}
     ,
 {"resources":"UpdateScreen", "role":"Guest"}
+    ,
+{"resources":"deletescreen", "role":"Guest"}
+    ,
+{"resources":"searchscreen", "role":"Guest"}
+    ,
+{"resources":"getallscreen", "role":"Guest"}
     
 ]
