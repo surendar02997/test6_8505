@@ -13,7 +13,4 @@ export class GetallscreenService {
         private http: HttpClient,
     ) { }
 
-    (): Observable<any> {
-        
-    }
 }
