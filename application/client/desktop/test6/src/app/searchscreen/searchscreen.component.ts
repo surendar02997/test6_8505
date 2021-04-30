@@ -23,4 +23,12 @@ export class SearchscreenComponent implements OnInit {
 
     ngOnInit() {
     }
+    GpSearch() {
+        this.searchscreenService.GpSearch(this.test).subscribe(data => {
+            this.rowData = data;
+        },
+        error => {
+            console.log('Error', error);
+        });
+    }
 }

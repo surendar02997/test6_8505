@@ -13,4 +13,14 @@ export class SearchscreenService {
         private http: HttpClient,
     ) { }
 
+    GpSearch(test): Observable<any> {
+        const temp = [];
+ 	 	const objectKeyPair = Object.entries(test);
+ 	 	objectKeyPair.forEach((element, index) => {
+ 	 	if (element[1]) {
+ 	 	temp.push(`${element[0]}=${element[1]}`);
+ 	 	}
+ 	 	});
+ 	 	return this.http.get(this.sharedService.DESKTOP_API + `/test/get/search${temp.length > 0 ? `?${temp.join('&')}` : ''}`);
+    }
 }
