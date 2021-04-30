@@ -8,7 +8,7 @@ import { GetallscreenService } from './getallscreen.service';
 })
 
 export class GetallscreenComponent implements OnInit {
-    columnDefs: any = [{ headerName: 'name', field: 'name'  },{ headerName: 'email', field: 'email'  },];
+    columnDefs: any = [{ headerName: 'Name', field: 'name'  },{ headerName: 'email', field: 'email'  },];
     public test = {
         name: '',
         email: '',
@@ -22,5 +22,14 @@ export class GetallscreenComponent implements OnInit {
     ) { }
 
     ngOnInit() {
+        this.GpGetAllValues();
+    }
+    GpGetAllValues() {
+        this.getallscreenService.GpGetAllValues().subscribe(data => {
+            this.rowData = data;
+        },
+        error => {
+            console.log('Error', error);
+        });
     }
 }

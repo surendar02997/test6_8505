@@ -6,6 +6,8 @@
     ,
 {"resources":"createscreen", "role":"Guest"}
     ,
+{"resources":"deletescreen", "role":"Guest"}
+    ,
 {"resources":"getallscreen", "role":"Guest"}
     
 ]
