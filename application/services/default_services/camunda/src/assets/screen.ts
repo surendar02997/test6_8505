@@ -9,5 +9,7 @@
 {"resources":"deletescreen", "role":"Guest"}
     ,
 {"resources":"getallscreen", "role":"Guest"}
+    ,
+{"resources":"searchscreen", "role":"Guest"}
     
 ]

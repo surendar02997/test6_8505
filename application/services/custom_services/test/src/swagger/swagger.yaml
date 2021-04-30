@@ -13,7 +13,7 @@ info:
       name: Apache 2.0
       url: https://www.apache.org/licenses/LICENSE-2.0.html
 servers:
-   - url: http://localhost:8006
+   - url: http://localhost:8007
      description: test
 tags:
 - name: test
@@ -26,26 +26,6 @@ paths:
          parameters:
          -  in: "path"
             description: GpDelete
-            name: id
-            required: true
-            schema:
-               type: "string"
-         responses:
-            200:
-               description: Success
-            400:
-               description: Bad Request
-            404:
-               description: Not Found
-            500:
-               description: Internal Server Error
-      get:
-         tags:
-         -  test
-         description: GpGetNounById
-         parameters:
-         -  in: "path"
-            description: GpGetNounById
             name: id
             required: true
             schema:
@@ -109,25 +89,6 @@ paths:
          tags:
          -  test
          description: GpCreate
-         requestBody:
-            content:
-               application/json:
-                  schema:
-                     $ref: "#/components/schemas/test"
-         responses:
-            200:
-               description: Success
-            400:
-               description: Bad Request
-            404:
-               description: Not Found
-            500:
-               description: Internal Server Error
-   "/test/get/update":
-      put:
-         tags:
-         -  test
-         description: GpSearchForUpdate
          requestBody:
             content:
                application/json:

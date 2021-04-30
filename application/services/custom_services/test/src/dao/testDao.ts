@@ -71,24 +71,6 @@ callback(result);
 }).catch((error)=>{
 callback(error);
 });}
-public GpSearchForUpdate(testData, callback){
-new CustomLogger().showLogger('info', 'Enter into testDao.ts: GpSearchForUpdate')
-
-this.test.findOneAndUpdate({ _id: testData._id }, testData, { new: true }).then((result)	=>	{
-new CustomLogger().showLogger('info', 'Exit from testDao.ts: GpSearchForUpdate');
-callback(result);
-}).catch((error)=>{
-callback(error);
-});}
-public GpGetNounById(testId, callback){
-new CustomLogger().showLogger('info', 'Enter into testDao.ts: GpGetNounById')
-
-this.test.findById(testId).then((result)	=>	{
-new CustomLogger().showLogger('info', 'Exit from testDao.ts: GpGetNounById');
-callback(result);
-}).catch((error)=>{
-callback(error);
-});}
 
 
 }

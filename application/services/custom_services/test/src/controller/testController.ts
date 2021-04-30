@@ -42,20 +42,6 @@ test.GpCreate(req, (response) => {
      res.json(response);
                 new CustomLogger().showLogger('info', 'Exit from testController.ts: GpCreate');
     })}
-public GpSearchForUpdate(req: Request, res: Response) {
-test.GpSearchForUpdate(req, (response) => {
-                new CustomLogger().showLogger('info', 'Enter into testController.ts: GpSearchForUpdate');
-     res.status(200);
-     res.json(response);
-                new CustomLogger().showLogger('info', 'Exit from testController.ts: GpSearchForUpdate');
-    })}
-public GpGetNounById(req: Request, res: Response) {
-test.GpGetNounById(req, (response) => {
-                new CustomLogger().showLogger('info', 'Enter into testController.ts: GpGetNounById');
-     res.status(200);
-     res.json(response);
-                new CustomLogger().showLogger('info', 'Exit from testController.ts: GpGetNounById');
-    })}
 
 
 }

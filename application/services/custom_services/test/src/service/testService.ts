@@ -47,22 +47,6 @@ public GpCreate(req: Request, callback){
          callback(response);
          });
     }
-public GpSearchForUpdate(req: Request, callback){
-    new CustomLogger().showLogger('info', 'Enter into testService.ts: GpSearchForUpdate')
-     const  testData = req.body;
-     test.GpSearchForUpdate(testData,(response)=>{
-             new CustomLogger().showLogger('info', 'Exit from testService.ts: GpSearchForUpdate')
-         callback(response);
-         });
-    }
-public GpGetNounById(req: Request, callback){
-    new CustomLogger().showLogger('info', 'Enter into testService.ts: GpGetNounById')
-     const  testId = req.params.id;
-     test.GpGetNounById(testId,(response)=>{
-             new CustomLogger().showLogger('info', 'Exit from testService.ts: GpGetNounById')
-         callback(response);
-         });
-    }
 
 
 }
