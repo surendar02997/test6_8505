@@ -8,7 +8,7 @@ import { GetallscreenService } from './getallscreen.service';
 })
 
 export class GetallscreenComponent implements OnInit {
-    columnDefs: any = [{ headerName: 'Name', field: 'name'  },{ headerName: 'email', field: 'email'  },];
+    columnDefs: any = [{ headerName: 'Name', field: 'name'  },{ headerName: 'Email', field: 'email'  },];
     public test = {
         name: '',
         email: '',
