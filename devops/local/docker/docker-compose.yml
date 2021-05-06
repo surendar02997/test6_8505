@@ -79,7 +79,7 @@ services:
     image: test-8505
     container_name: test-8505
     ports: 
-      - 8005:8005
+      - 8006:8006
     env_file: .env
     depends_on:
       - mongo
