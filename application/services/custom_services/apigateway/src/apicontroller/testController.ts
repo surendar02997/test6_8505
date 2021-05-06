@@ -13,13 +13,26 @@ export class testController implements Controller {
     }
 
     private initializeRoutes() {
-        this.router.delete('/test/:id', this.GpDelete);
+        this.router.put('/test/get/update', this.GpSearchForUpdate);
+this.router.delete('/test/:id', this.GpDelete);
 this.router.get('/test/get/search', this.GpSearch);
 this.router.put('/test', this.GpUpdate);
 this.router.get('/test', this.GpGetAllValues);
 this.router.post('/test', this.GpCreate);
+this.router.get('/test/:id', this.GpGetNounById);
     }
 
+public GpSearchForUpdate(req: Request, res: Response) {
+            new CustomLogger().showLogger('info', 'Enter into testController.ts: GpSearchForUpdate');
+        new ApiAdaptar().put(Constant.TESTURL + `${req.url}` , req.body)
+        .then((res: any) => res.response.json()).then(result => {
+              req.baseUrl === '/mobile' ? res.send(result) :
+              req.baseUrl === '/desktop' ? res.send(result) : res.send(null)
+            new CustomLogger().showLogger('info', 'Exit from testController.ts: GpSearchForUpdate');
+        }).catch(err => {
+            res.send(err);
+        });
+    }
 public GpDelete(req: Request, res: Response) {
             new CustomLogger().showLogger('info', 'Enter into testController.ts: GpDelete');
         new ApiAdaptar().delete(Constant.TESTURL + `${req.url}` )
@@ -71,6 +84,17 @@ public GpCreate(req: Request, res: Response) {
               req.baseUrl === '/mobile' ? res.send(result) :
               req.baseUrl === '/desktop' ? res.send(result) : res.send(null)
             new CustomLogger().showLogger('info', 'Exit from testController.ts: GpCreate');
+        }).catch(err => {
+            res.send(err);
+        });
+    }
+public GpGetNounById(req: Request, res: Response) {
+            new CustomLogger().showLogger('info', 'Enter into testController.ts: GpGetNounById');
+        new ApiAdaptar().get(Constant.TESTURL + `${req.url}` )
+        .then((res: any) => res.response.json()).then(result => {
+              req.baseUrl === '/mobile' ? res.send(result) :
+              req.baseUrl === '/desktop' ? res.send(result) : res.send(null)
+            new CustomLogger().showLogger('info', 'Exit from testController.ts: GpGetNounById');
         }).catch(err => {
             res.send(err);
         });

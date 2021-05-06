@@ -13,4 +13,13 @@ export class UpdatescrService {
         private http: HttpClient,
     ) { }
 
+    GpGetNounById(testId): Observable<any> {
+        return this.http.get(this.sharedService.DESKTOP_API + '/test/' + testId);
+    }
+    GpUpdate(test): Observable<any> {
+        return this.http.put(this.sharedService.DESKTOP_API + '/test', test);
+    }
+    GpDelete(testId): Observable<any> {
+        return this.http.delete(this.sharedService.DESKTOP_API + '/test/' + testId);
+    }
 }

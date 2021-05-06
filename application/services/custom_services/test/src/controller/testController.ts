@@ -7,7 +7,14 @@ export class testController {
     
     constructor() { }
     
-    public GpDelete(req: Request, res: Response) {
+    public GpSearchForUpdate(req: Request, res: Response) {
+test.GpSearchForUpdate(req, (response) => {
+                new CustomLogger().showLogger('info', 'Enter into testController.ts: GpSearchForUpdate');
+     res.status(200);
+     res.json(response);
+                new CustomLogger().showLogger('info', 'Exit from testController.ts: GpSearchForUpdate');
+    })}
+public GpDelete(req: Request, res: Response) {
 test.GpDelete(req, (response) => {
                 new CustomLogger().showLogger('info', 'Enter into testController.ts: GpDelete');
      res.status(200);
@@ -41,6 +48,13 @@ test.GpCreate(req, (response) => {
      res.status(200);
      res.json(response);
                 new CustomLogger().showLogger('info', 'Exit from testController.ts: GpCreate');
+    })}
+public GpGetNounById(req: Request, res: Response) {
+test.GpGetNounById(req, (response) => {
+                new CustomLogger().showLogger('info', 'Enter into testController.ts: GpGetNounById');
+     res.status(200);
+     res.json(response);
+                new CustomLogger().showLogger('info', 'Exit from testController.ts: GpGetNounById');
     })}
 
 

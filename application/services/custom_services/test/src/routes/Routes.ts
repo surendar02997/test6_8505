@@ -11,11 +11,13 @@ export class Routes {
                 status: 'up'
             })
         })
-        app.route('/test/:id').delete(this.test.GpDelete);
+        app.route('/test/get/update').put(this.test.GpSearchForUpdate);
+app.route('/test/:id').delete(this.test.GpDelete);
 app.route('/test/get/search').get(this.test.GpSearch);
 app.route('/test').put(this.test.GpUpdate);
 app.route('/test').get(this.test.GpGetAllValues);
 app.route('/test').post(this.test.GpCreate);
+app.route('/test/:id').get(this.test.GpGetNounById);
      }
 
 }

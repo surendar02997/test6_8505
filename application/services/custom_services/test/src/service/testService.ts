@@ -7,7 +7,15 @@ export class testService {
     
     constructor() { }
     
-    public GpDelete(req: Request, callback){
+    public GpSearchForUpdate(req: Request, callback){
+    new CustomLogger().showLogger('info', 'Enter into testService.ts: GpSearchForUpdate')
+     const  testData = req.body;
+     test.GpSearchForUpdate(testData,(response)=>{
+             new CustomLogger().showLogger('info', 'Exit from testService.ts: GpSearchForUpdate')
+         callback(response);
+         });
+    }
+public GpDelete(req: Request, callback){
     new CustomLogger().showLogger('info', 'Enter into testService.ts: GpDelete')
      const  testId = req.params.id;
      test.GpDelete(testId,(response)=>{
@@ -44,6 +52,14 @@ public GpCreate(req: Request, callback){
      const  testData = req.body;
      test.GpCreate(testData,(response)=>{
              new CustomLogger().showLogger('info', 'Exit from testService.ts: GpCreate')
+         callback(response);
+         });
+    }
+public GpGetNounById(req: Request, callback){
+    new CustomLogger().showLogger('info', 'Enter into testService.ts: GpGetNounById')
+     const  testId = req.params.id;
+     test.GpGetNounById(testId,(response)=>{
+             new CustomLogger().showLogger('info', 'Exit from testService.ts: GpGetNounById')
          callback(response);
          });
     }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchscreenService } from './searchscreen.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-searchscreen',
@@ -19,6 +20,7 @@ export class SearchscreenComponent implements OnInit {
 
     constructor (
         private searchscreenService: SearchscreenService,
+        private router: Router,
     ) { }
 
     ngOnInit() {
@@ -30,5 +32,11 @@ export class SearchscreenComponent implements OnInit {
         error => {
             console.log('Error', error);
         });
+    }
+    GpRoute(queryId) {
+        this.router.navigate(['./updatescr'], { queryParams: { 'id': queryId } })
+    }
+    onSelectionChanged(values) {
+        this.GpRoute(values._id);
     }
 }

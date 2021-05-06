@@ -29,7 +29,8 @@
             <td style="text-align: center;" colspan="5">No Data Found</td>
         </tbody>
         <tbody class="table-design" *ngIf="rowData.length>0">
-            <tr *ngFor="let values of rowData | slice: (page-1) * paginationPageSize :(page-1) * paginationPageSize + paginationPageSize">
+            <tr (click)="onSelectionChanged(values)" *ngFor="let values of rowData | slice: (page-1) * paginationPageSize :(page-1) * paginationPageSize + paginationPageSize"
+            style="cursor: pointer;">
                 <td>{{ values.name }}</td>
                 <td>{{ values.email }}</td>
             </tr>
