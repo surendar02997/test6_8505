@@ -21,15 +21,15 @@ import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
-                                                                AppComponent
+                                                                    AppComponent
 ],
   imports: [
-ManageusersModule,
-AuthorizationModule,
+  UserModule,
+ManagerolesModule,
 HomeModule,
 SignupModule,
 LoginModule,
-  UserModule,
+AuthorizationModule,
   FormsModule,
 HttpClientModule,
 ManageusersModule,
@@ -42,10 +42,10 @@ TranslatorModule,
 AppRoutingModule,
 BrowserAnimationsModule,
       BrowserModule,
-                            AdminModule
+                              AdminModule
 ],
   providers: [
-                                                            	SharedService
+                                                                	SharedService
 ],
   bootstrap: [AppComponent]
 })

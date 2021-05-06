@@ -25,7 +25,6 @@ const routes: Routes = [
 { path: 'admin', component: AdminComponent, canActivate: [AuthGuard] },
 
 { path : 'createscreen', loadChildren: () => import('./createscreen/createscreen.module').then(m => m.CreatescreenModule), canActivate: [AuthGuard] } , 
-{ path : 'deletescreen', loadChildren: () => import('./deletescreen/deletescreen.module').then(m => m.DeletescreenModule), canActivate: [AuthGuard] } , 
 { path : 'getallscreen', loadChildren: () => import('./getallscreen/getallscreen.module').then(m => m.GetallscreenModule), canActivate: [AuthGuard] } , 
 { path : 'searchscreen', loadChildren: () => import('./searchscreen/searchscreen.module').then(m => m.SearchscreenModule), canActivate: [AuthGuard] } , 
 { path : 'updatescr', loadChildren: () => import('./updatescr/updatescr.module').then(m => m.UpdatescrModule), canActivate: [AuthGuard] } , 
