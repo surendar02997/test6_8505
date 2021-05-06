@@ -54,8 +54,8 @@ service:
   test: 
     name: test
     type: NodePort
-    port: 8007
-    targetPort: 8007
+    port: 8005
+    targetPort: 8005
 
 
 deployment:

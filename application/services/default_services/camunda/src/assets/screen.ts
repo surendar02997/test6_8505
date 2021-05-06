@@ -11,5 +11,7 @@
 {"resources":"getallscreen", "role":"Guest"}
     ,
 {"resources":"searchscreen", "role":"Guest"}
+    ,
+{"resources":"updatescr", "role":"Guest"}
     
 ]
